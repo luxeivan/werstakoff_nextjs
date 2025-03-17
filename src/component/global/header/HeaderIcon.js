@@ -1,11 +1,13 @@
 'use client'
 import useGlobal from '@/store/global'
-import { Flex, Input } from 'antd'
+import { Flex, Input,Badge } from 'antd'
 import Link from 'next/link'
 import React, { useEffect } from 'react'
 import styles from './header.module.css'
+import useBasket from '@/store/basket'
 
 export default function HeaderIcon() {
+    const basket = useBasket(store=>store.basket)
     const { transparent } = useGlobal(store => store)
     useEffect(() => {
         console.log(transparent)
@@ -26,6 +28,8 @@ export default function HeaderIcon() {
                 </svg>
             </Link>
             <Link href={'#'}>
+            <Badge count={basket.length}>
+
                 <svg className={transparent ? styles.icon_transparent : styles.icon} width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_200_7678)">
                         <path d="M7.01345 17.3316C7.44371 17.3316 7.79252 16.9828 7.79252 16.5525C7.79252 16.1222 7.44371 15.7734 7.01345 15.7734C6.58318 15.7734 6.23438 16.1222 6.23438 16.5525C6.23438 16.9828 6.58318 17.3316 7.01345 17.3316Z" fill="#D9D9D9" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round" />
@@ -38,6 +42,7 @@ export default function HeaderIcon() {
                         </clipPath>
                     </defs>
                 </svg>
+            </Badge>
             </Link>
         </Flex>
     )

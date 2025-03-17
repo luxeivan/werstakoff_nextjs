@@ -8,7 +8,7 @@ import Meta from 'antd/es/card/Meta';
 import Container from '@/component/global/Container';
 import Link from 'next/link';
 import axios from 'axios';
-import ButtonAddBasket from './ButtonAddBasket';
+import ButtonAddBasket from '@/component/ui/catalog/ButtonAddBasket';
 // import Image from 'next/image';
 
 export const revalidate = 60

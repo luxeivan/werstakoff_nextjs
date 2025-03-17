@@ -1,4 +1,5 @@
 import Container from '@/component/global/Container';
+import ButtonAddBasket from '@/component/ui/catalog/ButtonAddBasket';
 import { strapi } from '@strapi/client';
 import { Button, Descriptions, Flex, Image } from 'antd';
 import Paragraph from 'antd/es/typography/Paragraph';
@@ -35,7 +36,7 @@ export default async function page({ params }) {
     const product = (await axios(`${process.env.WERSTAKOFF_SERVER}/api/product.php?product=${productId || "0"}`))?.data
     const productProperties = []
     for (let key in product.properties) {
-        
+
         if (product.properties.hasOwnProperty(key)) {
             console.log(typeof product.properties[key]);
             if (typeof product.properties[key] !== 'object' && !Array.isArray(product.properties[key])) {
@@ -57,19 +58,24 @@ export default async function page({ params }) {
                                 <Image key={index} width={100} src={item} />
                             )}
                         </Flex>
-                        <Image width={400} src={product.properties['Галерея изображений'][0]} />
+                        {product.properties['Галерея изображений'] &&
+                            <Image width={400} src={product.properties['Галерея изображений'][0]} />
+                        }
+                        {!product.properties['Галерея изображений'] &&
+                            <Image width={400} src={'https://avatars.mds.yandex.net/get-mpic/3927667/2a000001901c8fe9c83b5edca1a9fe1319b4/orig'} />
+                        }
                     </Flex>
                     <div style={{ flex: 1 }}>
                         <Title level={3}><span style={{ fontSize: 14, color: "#888" }}>Цена:</span> {product.CATALOG_PRICE_1} {product.CATALOG_CURRENCY_1}</Title>
-                        <Button type='primary'>В корзину</Button>
+                        <ButtonAddBasket id={product.ID}/>
                         <Descriptions title="Свойства" column={1} bordered>
                             {productProperties.map((item, index) =>
                                 <Descriptions.Item key={index} label={item.label}>{item.value}</Descriptions.Item>
                             )}
                         </Descriptions>
                     </div>
-                    <Paragraph>{product.DETAIL_TEXT}</Paragraph>
                 </Flex>
+                <Paragraph>{product.DETAIL_TEXT}</Paragraph>
             </div>
         </Container>
     )

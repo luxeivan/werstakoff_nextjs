@@ -11,7 +11,7 @@ export default function Home() {
       <div>
         <Title style={{textAlign:"center"}}>Главная</Title>
         <Divider/>
-        <Title style={{textAlign:"center"}}>Салам ТИРГ!!!</Title>
+        <Title style={{textAlign:"center"}}>Салам ТИГР!!!</Title>
         {/* <ButtonChangeTransparent/> */}
         </div>
       

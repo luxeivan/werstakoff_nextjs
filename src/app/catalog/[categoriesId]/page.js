@@ -55,7 +55,7 @@ export default async function Catalog({ params }) {
     //     }
 
     // });
-    console.log("productList", productList)
+    // console.log("productList", productList)
     return (
         <Container>
             <Title level={1} style={{ textAlign: "center" }}>Каталог</Title>
@@ -67,7 +67,7 @@ export default async function Catalog({ params }) {
                             <Link
                                 href={`/catalog/${item.ID}`}
                                 style={{ display: "block", margin: "0 15px 30px 15px", width: item.bigCard ? "calc(50% - 30px)" : "calc(25% - 30px)", }}
-                                key={item.id}
+                                key={item.ID}
                             >
                                 <Card
                                     hoverable

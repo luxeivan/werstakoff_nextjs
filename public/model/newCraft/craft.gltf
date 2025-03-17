@@ -1,0 +1,377 @@
+{
+  "nodes": [
+    {
+      "name": "Plane.782",
+      "mesh": 0
+    },
+    {
+      "name": "Plane.782",
+      "mesh": 1
+    },
+    {
+      "name": "Plane.782",
+      "mesh": 2
+    },
+    {
+      "name": "Plane.782",
+      "mesh": 3
+    }
+  ],
+  "scene": 0,
+  "materials": [
+    {
+      "name": "prf_toumb_blue_material",
+      "doubleSided": true,
+      "emissiveFactor": [
+        0.00000000000000000000e+00,
+        0.00000000000000000000e+00,
+        0.00000000000000000000e+00
+      ],
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00
+        ],
+        "metallicFactor": 1.00000000000000000000e+00,
+        "roughnessFactor": 9.00000000000000022204e-01
+      }
+    },
+    {
+      "name": "metal",
+      "doubleSided": true,
+      "emissiveFactor": [
+        0.00000000000000000000e+00,
+        0.00000000000000000000e+00,
+        0.00000000000000000000e+00
+      ],
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00
+        ],
+        "metallicFactor": 1.00000000000000000000e+00,
+        "roughnessFactor": 9.00000000000000022204e-01
+      }
+    },
+    {
+      "name": "pColor_perfopanels",
+      "doubleSided": true,
+      "emissiveFactor": [
+        0.00000000000000000000e+00,
+        0.00000000000000000000e+00,
+        0.00000000000000000000e+00
+      ],
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00
+        ],
+        "metallicFactor": 1.00000000000000000000e+00,
+        "roughnessFactor": 9.00000000000000022204e-01
+      }
+    },
+    {
+      "name": "wood_material",
+      "doubleSided": true,
+      "emissiveFactor": [
+        0.00000000000000000000e+00,
+        0.00000000000000000000e+00,
+        0.00000000000000000000e+00
+      ],
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00,
+          1.00000000000000000000e+00
+        ],
+        "metallicFactor": 1.00000000000000000000e+00,
+        "roughnessFactor": 9.00000000000000022204e-01
+      }
+    }
+  ],
+  "accessors": [
+    {
+      "count": 36,
+      "type": "SCALAR",
+      "byteOffset": 0,
+      "bufferView": 0,
+      "componentType": 5125
+    },
+    {
+      "count": 36,
+      "max": [
+        6.24438858932925500156e-01,
+        8.82999479770660400391e-01,
+        3.85730881637995182132e-01
+      ],
+      "min": [
+        -5.62561058097408972500e-01,
+        8.79999458789825439453e-01,
+        -3.51265023999745906735e-01
+      ],
+      "type": "VEC3",
+      "byteOffset": 0,
+      "bufferView": 1,
+      "componentType": 5126
+    },
+    {
+      "count": 36,
+      "type": "VEC3",
+      "byteOffset": 12,
+      "bufferView": 1,
+      "componentType": 5126
+    },
+    {
+      "count": 36,
+      "type": "VEC2",
+      "byteOffset": 24,
+      "bufferView": 1,
+      "componentType": 5126
+    },
+    {
+      "count": 768,
+      "type": "SCALAR",
+      "byteOffset": 0,
+      "bufferView": 2,
+      "componentType": 5125
+    },
+    {
+      "count": 768,
+      "max": [
+        5.95324493355227746250e-01,
+        8.22000205516815185547e-01,
+        3.51734359211389957522e-01
+      ],
+      "min": [
+        -5.33147179179714880704e-01,
+        1.88481390476226806641e-01,
+        -2.91547488027150691892e-01
+      ],
+      "type": "VEC3",
+      "byteOffset": 0,
+      "bufferView": 3,
+      "componentType": 5126
+    },
+    {
+      "count": 768,
+      "type": "VEC3",
+      "byteOffset": 12,
+      "bufferView": 3,
+      "componentType": 5126
+    },
+    {
+      "count": 768,
+      "type": "VEC2",
+      "byteOffset": 24,
+      "bufferView": 3,
+      "componentType": 5126
+    },
+    {
+      "count": 23028,
+      "type": "SCALAR",
+      "byteOffset": 0,
+      "bufferView": 4,
+      "componentType": 5125
+    },
+    {
+      "count": 22799,
+      "max": [
+        5.87279118008090295078e-01,
+        8.39999973773956298828e-01,
+        3.69720239586298404788e-01
+      ],
+      "min": [
+        -5.25101803832577429532e-01,
+        4.77463006973266601562e-03,
+        -3.06234877162511409665e-01
+      ],
+      "type": "VEC3",
+      "byteOffset": 0,
+      "bufferView": 5,
+      "componentType": 5126
+    },
+    {
+      "count": 22799,
+      "type": "VEC3",
+      "byteOffset": 12,
+      "bufferView": 5,
+      "componentType": 5126
+    },
+    {
+      "count": 22799,
+      "type": "VEC2",
+      "byteOffset": 24,
+      "bufferView": 5,
+      "componentType": 5126
+    },
+    {
+      "count": 324,
+      "type": "SCALAR",
+      "byteOffset": 0,
+      "bufferView": 6,
+      "componentType": 5125
+    },
+    {
+      "count": 324,
+      "max": [
+        6.27438879913760461093e-01,
+        8.79999458789825439453e-01,
+        3.88732958979074894046e-01
+      ],
+      "min": [
+        -5.65561079078243933438e-01,
+        8.40499997138977050781e-01,
+        -3.54267071538503230954e-01
+      ],
+      "type": "VEC3",
+      "byteOffset": 0,
+      "bufferView": 7,
+      "componentType": 5126
+    },
+    {
+      "count": 324,
+      "type": "VEC3",
+      "byteOffset": 12,
+      "bufferView": 7,
+      "componentType": 5126
+    },
+    {
+      "count": 324,
+      "type": "VEC2",
+      "byteOffset": 24,
+      "bufferView": 7,
+      "componentType": 5126
+    }
+  ],
+  "asset": {
+    "version": "2.0",
+    "generator": "Wings 3D 2.4.1"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 144,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteStride": 32,
+      "byteLength": 1152,
+      "byteOffset": 144
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3072,
+      "byteOffset": 1296
+    },
+    {
+      "buffer": 0,
+      "byteStride": 32,
+      "byteLength": 24576,
+      "byteOffset": 4368
+    },
+    {
+      "buffer": 0,
+      "byteLength": 92112,
+      "byteOffset": 28944
+    },
+    {
+      "buffer": 0,
+      "byteStride": 32,
+      "byteLength": 729568,
+      "byteOffset": 121056
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1296,
+      "byteOffset": 850624
+    },
+    {
+      "buffer": 0,
+      "byteStride": 32,
+      "byteLength": 10368,
+      "byteOffset": 851920
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "craft.bin",
+      "byteLength": 862288
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Plane.782",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          },
+          "material": 0,
+          "indices": 0
+        }
+      ]
+    },
+    {
+      "name": "Plane.782",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TEXCOORD_0": 7
+          },
+          "material": 1,
+          "indices": 4
+        }
+      ]
+    },
+    {
+      "name": "Plane.782",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 10,
+            "POSITION": 9,
+            "TEXCOORD_0": 11
+          },
+          "material": 2,
+          "indices": 8
+        }
+      ]
+    },
+    {
+      "name": "Plane.782",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 14,
+            "POSITION": 13,
+            "TEXCOORD_0": 15
+          },
+          "material": 3,
+          "indices": 12
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}

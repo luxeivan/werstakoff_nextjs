@@ -1,0 +1,11 @@
+Model Information:
+* title:	Верстак SLF
+* source:	https://sketchfab.com/3d-models/slf-67da339c5c5d4ddeb887809358de3e22
+* author:	werstakoff_official (https://sketchfab.com/werstakoff_official)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Верстак SLF" (https://sketchfab.com/3d-models/slf-67da339c5c5d4ddeb887809358de3e22) by werstakoff_official (https://sketchfab.com/werstakoff_official) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

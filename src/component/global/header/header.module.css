@@ -1,0 +1,15 @@
+.icon path {
+    stroke: #333;
+    transition: all .3s ease-in-out;
+}
+.icon:hover path {
+    stroke: #0078EE;
+}
+
+.icon_transparent path {
+    stroke: #fff;
+    transition: all .3s ease-in-out;
+}
+.icon_transparent:hover path {
+    stroke: #0078EE;
+}

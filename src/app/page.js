@@ -9,9 +9,10 @@ export default function Home() {
   return (
     <Container>
       <div>
-        <Title>Главная</Title>
+        <Title style={{textAlign:"center"}}>Главная</Title>
         <Divider/>
-        <ButtonChangeTransparent/>
+        <Title style={{textAlign:"center"}}>Салам ТИРГ!!!</Title>
+        {/* <ButtonChangeTransparent/> */}
         </div>
       
     </Container>

@@ -10,7 +10,7 @@ export default function HeaderIcon() {
     const basket = useBasket(store=>store.basket)
     const { transparent } = useGlobal(store => store)
     useEffect(() => {
-        console.log(transparent)
+        // console.log(transparent)
     }, [transparent])
     // console.log(styles)
     return (

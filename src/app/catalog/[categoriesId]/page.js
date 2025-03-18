@@ -17,7 +17,7 @@ export const metadata = {
 };
 
 const filtering = (arr, obj) => {
-    if(!Object.keys(obj).length) return arr
+    if (!Object.keys(obj).length) return arr
     const filterConditions = obj;
     // console.log("obj", obj);
     // console.log("arr", arr);
@@ -26,15 +26,15 @@ const filtering = (arr, obj) => {
         // console.log(item.properties)
         let temp = false
         for (let key in filterConditions) {
-            if(filterConditions[key].includes('|')){
+            if (filterConditions[key].includes('|')) {
                 const tempArr = filterConditions[key].split('|')
-                tempArr.forEach(tempItem=>{
-                    if(item.properties[key]===tempItem){
+                tempArr.forEach(tempItem => {
+                    if (item.properties[key] === tempItem) {
                         temp = true
-                        return 
+                        return
                     }
                 })
-            }else if (item.properties[key] === filterConditions[key]) {
+            } else if (item.properties[key] === filterConditions[key]) {
                 temp = true
                 break
             }
@@ -53,7 +53,7 @@ export default async function Catalog({ params, searchParams }) {
     const searchObj = await searchParams
     // console.log("searchObj", searchObj);
     const filteringProductList = filtering(productList.data, searchObj)
-    console.log("filteringProductList", filteringProductList);
+    // console.log("filteringProductList", filteringProductList);
     const filterData = []
     productList.data.forEach(element => {
         for (let key in element.properties) {
@@ -89,9 +89,11 @@ export default async function Catalog({ params, searchParams }) {
 
             <Categories categoryList={categoryList} />
             <Flex gap={20}>
-                <div style={{ flex: 1, minWidth: "25%" }} >
-                    <Filter filterData={filterData} />
-                </div>
+                {filterData.length > 0 &&
+                    <div style={{ flex: 1, minWidth: "25%" }} >
+                        <Filter filterData={filterData} />
+                    </div>
+                }
                 <div style={{ flex: 1, minWidth: "75%" }}>
                     <Products productList={filteringProductList} />
                 </div>

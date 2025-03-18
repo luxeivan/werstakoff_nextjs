@@ -22,19 +22,18 @@ export default async function Products({productList}) {
                             style={{ display: "block", width: item.bigCard ? "calc(50% - 20px)" : "calc(25% - 20px)", }}
                         >
                             <Card
-                                key={item.ID}
                                 hoverable
-                                style={{ backgroundColor: "#f4f4f4" }}
+                                title={"Артикул: "+item.properties['Артикул']}
+                                // style={{ backgroundColor: "#f4f4f4" }}
                                 cover={
-                                    <div style={{ height: 300, backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "center", backgroundImage: `url(${item.PREVIEW_PICTURE ? item.PREVIEW_PICTURE : 'https://avatars.mds.yandex.net/get-mpic/3927667/2a000001901c8fe9c83b5edca1a9fe1319b4/orig'})` }}>
+                                    <div style={{margin:10, height:200,weight:300, backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "center", backgroundImage: `url(${item.PREVIEW_PICTURE ? item.PREVIEW_PICTURE : 'https://avatars.mds.yandex.net/get-mpic/3927667/2a000001901c8fe9c83b5edca1a9fe1319b4/orig'})` }}>
                                     </div>
                                 }
-
                             >
                                 <Flex vertical gap={10}>
 
-                                    <Text style={{ fontWeight: 700, fontSize: 16 }}>{item.CATALOG_PRICE_1} {item.CATALOG_CURRENCY_1}</Text>
-                                    <Meta title={item.NAME} description={item.shortDescription} />
+                                    <Text style={{ fontWeight: 700, fontSize: 16,color:"gray" }}>{item.CATALOG_PRICE_1} {item.CATALOG_CURRENCY_1}</Text>
+                                    <Title level={4}>{item.NAME}</Title>
                                     <ButtonAddBasket id={item.ID} />
                                 </Flex>
                             </Card>

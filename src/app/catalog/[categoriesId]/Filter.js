@@ -1,20 +1,21 @@
 'use client'
-import { Button, Form } from 'antd';
-import Checkbox from 'antd/es/checkbox/Checkbox';
-import Radio from 'antd/es/radio/radio';
+import { Button, Form, Checkbox } from 'antd';
+// import Checkbox from 'antd/es/checkbox/Checkbox';
+// import Radio from 'antd/es/radio/radio';
 import React from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 const { Group } = Checkbox
+const { Item } = Form
 
 export default function Filter({ filterData }) {
     const pathname = usePathname();
     const { replace } = useRouter();
-    const searchParams = useSearchParams();
+    // const searchParams = useSearchParams();
     // console.log(filterData)
     const onFinish = (values) => {
         const params = new URLSearchParams();
-        console.log(values);
+        // console.log(values);
         for (let key in values) {
             if (values[key] && values[key].length > 0) {
                 params.set(key, Array.isArray(values[key]) ? values[key].join('|') : values[key])
@@ -31,13 +32,13 @@ export default function Filter({ filterData }) {
             }}
             layout='vertical'
         >
-            <Form.Item>
-                <Button type='primary' htmlType='submit'>Фильтровать</Button>
-            </Form.Item>
+            <Item>
+                <Button type='primary' htmlType='submit'>Показать</Button>
+            </Item>
             {filterData.map((item, index) =>
-                <Form.Item key={index} name={item.label} label={item.label}>
-                    <Group>
-                        {Array.from(item.value).map((val, index) =>
+                <Item key={index} name={item.label} label={item.label}>
+                    <Group options={Array.from(item.value)} />
+                    {/* {Array.from(item.value).map((val, index) =>
                             <Checkbox
                                 key={index}
                                 value={val}
@@ -47,12 +48,12 @@ export default function Filter({ filterData }) {
                             >
                                 {val}
                             </Checkbox>
-                        )}
-                    </Group>
-                </Form.Item>)}
-            <Form.Item>
-                <Button type='primary' htmlType='submit'>Фильтровать</Button>
-            </Form.Item>
+                        )} */}
+
+                </Item>)}
+            <Item>
+                <Button type='primary' htmlType='submit'>Показать</Button>
+            </Item>
         </Form>
     )
 }

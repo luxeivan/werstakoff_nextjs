@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <Container>
       <Divider style={{margin:0}}/>
-      <Flex justify='space-between' style={{ padding: 20 }}>
+      <Flex justify='space-between' style={{ padding: 20 }} align='center'>
         <Flex gap={50}>
           <Text>Москва ©{dayjs().format('YYYY')} Верстакофф ®</Text>
           <Text>Разработка сайта — Шишкин Иван</Text>

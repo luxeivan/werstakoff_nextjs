@@ -8,7 +8,7 @@ export default function News() {
     return (
         <Container>
             <Title style={{ textAlign: "center" }}>Новости</Title>
-            <Skeleton />
+            <Skeleton active />
         </Container>
     )
 }

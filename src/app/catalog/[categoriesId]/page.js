@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { strapi } from '@strapi/client';
 // import { redirect } from 'next/navigation'
 import Title from 'antd/es/typography/Title';
@@ -59,47 +59,49 @@ export default async function Catalog({ params }) {
     return (
         <Container>
             <Title level={1} style={{ textAlign: "center" }}>Каталог</Title>
-            {categoryList.data.length > 0 &&
-                <>
-                    <Title level={1}>Категории</Title>
-                    <Flex wrap="wrap" style={{ width: "calc(100% + 30px)" }}>
-                        {categoryList.data.map(item =>
-                            <Link
-                                href={`/catalog/${item.ID}`}
-                                style={{ display: "block", margin: "0 15px 30px 15px", width: item.bigCard ? "calc(50% - 30px)" : "calc(25% - 30px)", }}
-                                key={item.ID}
-                            >
-                                <Card
-                                    hoverable
-                                    styles={{ cover: { padding: 20, display: "flex", justifyContent: "center" } }}
-                                    style={{
-                                        // width: 300,
-                                        height: "100%",
-                                        // maxHeight: 300,
-                                        backgroundColor: item.backgroundColor || "#3A75D3",
-                                        color: "#fff"
-                                    }}
-                                    cover={
-                                        <div style={{ height: 300, backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "center", backgroundImage: `url(${item.PREVIEW_PICTURE ? item.PREVIEW_PICTURE : 'https://avatars.mds.yandex.net/get-mpic/3927667/2a000001901c8fe9c83b5edca1a9fe1319b4/orig'})` }}>
+            <Suspense fallback={<div>Loading...</div>}>
+                {categoryList.data.length > 0 &&
+                    <>
+                        <Title level={1}>Категории</Title>
+                        <Flex wrap="wrap" style={{ width: "calc(100% + 30px)" }}>
+                            {categoryList.data.map(item =>
+                                <Link
+                                    href={`/catalog/${item.ID}`}
+                                    style={{ display: "block", margin: "0 15px 30px 15px", width: item.bigCard ? "calc(50% - 30px)" : "calc(25% - 30px)", }}
+                                    key={item.ID}
+                                >
+                                    <Card
+                                        hoverable
+                                        styles={{ cover: { padding: 20, display: "flex", justifyContent: "center" } }}
+                                        style={{
+                                            // width: 300,
+                                            height: "100%",
+                                            // maxHeight: 300,
+                                            backgroundColor: item.backgroundColor || "#3A75D3",
+                                            color: "#fff"
+                                        }}
+                                        cover={
+                                            <div style={{ height: 300, backgroundRepeat: "no-repeat", backgroundSize: "contain", backgroundPosition: "center", backgroundImage: `url(${item.PREVIEW_PICTURE ? item.PREVIEW_PICTURE : 'https://avatars.mds.yandex.net/get-mpic/3927667/2a000001901c8fe9c83b5edca1a9fe1319b4/orig'})` }}>
 
-                                            {/* <img
+                                                {/* <img
                                     preview={false}
                                     style={{ textAlign: "center", }}
                                     // width={300}
                                     // height={300}
                                     alt="example"
                                     src={item.image ? `${process.env.BACK_SERVER}${item.image?.url}` : 'https://avatars.mds.yandex.net/get-mpic/3927667/2a000001901c8fe9c83b5edca1a9fe1319b4/orig'} /> */}
-                                        </div>
-                                    }
-                                >
-                                    <Title style={{ color: "#fff" }} level={2} >{item.NAME}</Title>
-                                    {/* <Meta style={{ color: "#fff" }} title={item.name} description={item.shortDescription} /> */}
-                                </Card>
-                            </Link>
-                        )}
-                    </Flex>
-                </>
-            }
+                                            </div>
+                                        }
+                                    >
+                                        <Title style={{ color: "#fff" }} level={2} >{item.NAME}</Title>
+                                        {/* <Meta style={{ color: "#fff" }} title={item.name} description={item.shortDescription} /> */}
+                                    </Card>
+                                </Link>
+                            )}
+                        </Flex>
+                    </>
+                }
+            </Suspense>
             {categoryList.data.length > 0 && productList.data.length > 0 && <Divider />}
             {productList.data.length > 0 &&
                 <>
